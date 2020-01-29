@@ -1,10 +1,23 @@
 import React from 'react';
 import './App.css';
-import { Home, About, Contact, Navigation } from './components';
+import { Home, About, Contact, Navigation } from './components/index';
+import { Route, Switch } from 'react-router-dom';
 
 const App = () => (
   <div>
-    <Navigation />
+  
+  <Navigation />
+  <Switch>
+    <Route exact path ="/">
+      <Home/>
+    </Route>
+    <Route exact path = "/about">
+      <About/>
+    </Route>
+    <Route exact path = "/contact">
+      <Contact/>
+    </Route>
+    </Switch>
   </div>
 );
 
